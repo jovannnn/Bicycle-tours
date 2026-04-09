@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пријавени учесници</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Пријавени учесници</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Име</th>
+            <th>Презиме</th>
+            <th>Е-маил</th>
+            <th>Телефон</th>
+            <th>Име на турата</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for registration in registrations %}
+        <tr>
+            <td>{{ registration.first_name }}</td>
+            <td>{{ registration.last_name }}</td>
+            <td>{{ registration.email }}</td>
+            <td>{{ registration.phone }}</td>
+            <td>{{ registration.ime_tura }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+</body>
+</html>

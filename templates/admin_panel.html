@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/admin_panel.css"
+    <title></title>
+</head>
+<body>
+    <div class="admin-container">
+    <h2>Добредојдовте во административниот панел</h2>
+    <a href="/logout">Одјава</a>
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>ID</th>
+            <th>Име</th>
+            <th>Презиме</th>
+            <th>Email</th>
+            <th>Телефон</th>
+            <th>Тура</th>
+            <th>Акции</th>
+        </tr>
+        {% for registration in registrations %}
+        <tr>
+            <td>{{ registration.id }}</td>
+            <td>{{ registration.first_name }}</td>
+            <td>{{ registration.last_name }}</td>
+            <td>{{ registration.email }}</td>
+            <td>{{ registration.phone }}</td>
+            <td>{{ registration.ime_tura }}</td>
+            <td>
+                <a href="/delete/{{ registration.id }}" onclick="return confirm('Дали сте сигурни дека сакате да го избришете овој запис?')">Избриши</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    </div>
+</body>
+</html>

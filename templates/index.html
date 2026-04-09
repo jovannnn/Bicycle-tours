@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/animacija.css">
+    <title>Велосипедски тури</title>
+</head>
+<body>
+    
+<!--Анимација-->
+<div id="Animacija"></div>
+
+<header>
+    <h1>Велосипедски тури</h1>
+    <div class="prevod">
+    <a href="{{ url_for('index') }}">MK
+        <img src="static/images/mk.png" alt="MK" class="zname">
+    </a>
+    <a href="{{ url_for('index_en') }}">EN
+        <img src="static/images/en.png" alt="EN" class="zname">
+    </a>
+    </div>
+</header>
+
+<!-- Хедер со хардбургер мени -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#home">
+                <img src="static/images/joco.png" alt="JocoBike Logo" class="logo-img">
+            </a>
+        </div>
+        <div class="menu-icon" id="menu-icon">
+            &#9776; <!-- Симбол за хардбургер -->
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Почетна</a></li>
+            <li><a href="#about">За нас</a></li>
+            <li><a href="#gear">Опрема</a></li>
+            <li><a href="#tours">Тури</a></li>
+            <li><a href="#registration">Закажи термин</a></li>
+            <li><a href="{{ url_for('gallery') }}">Галерија</a></li>
+            <li><a href="{{ url_for('soop') }}">Соопштение</a></li>
+        </ul>
+    </nav>
+
+<!-- Почетна страна -->
+<section id="home">
+    <h2>Добредојдовте на нашите велосипедски тури</h2>
+    <p>Уживајте во незаборавни авантури на велосипед низ планини, убавото езеро и убавините на Струга и Охрид.</p><br>
+    <img src="static/images/pocetnaslika.jpg" alt="Велосипедска тура">
+    <div class="cta">
+        <h2>Подгответе се за незаборавна велосипедска авантура</h2>
+        <a href="#registration" class="cta-button">Резервирај Сега</a>
+    </div>
+    
+</section>
+
+<!--Анимација-->
+<section id="animacija" class="animacija-container">
+    <h2>Во духот на велосипедизмот</h2>
+    <div class="video-wrapper">
+        <video class="video-player" controls>
+            <source src="static/images/animacija.mp4" type="video/mp4">
+            Вашиот прелистувач не го поддржува видеото.
+        </video>
+    </div>
+</section>
+
+<!-- Секција За нас -->
+<section id="about">
+    <h2>За нас</h2>
+    <div class="guide">
+        <img src="static/images/slika.jpg" alt="Водич 1">
+        <h3>Јован Белкоски</h3><br>
+        <p>Главен водич со многу години искуство во организирање на велосипедски тури низ Струга и Охрид.</p>
+    </div>
+    <!--<div class="guide">
+        <img src="static/images/prazna.png" alt="Водич 2">
+        <h3>Стојан Ефримов</h3><br>
+        <p>Ентузијаст за планинарење и велосипедизам, Стојан води тури за природољубци.</p>
+    </div>-->
+    <div class="guide">
+        <img src="static/images/slika3.jpg" alt="Водич 3">
+        <h3>Александар Трајков</h3><br>
+        <p>Експерт за екстремни велосипедски авантури со акцент на безбедноста и забава.</p>
+    </div>
+    <!--<div class="guide">
+        <img src="static/images/slika4.jpg" alt="Водич 4">
+        <h3>Марија Митревска</h3><br>
+        <p>Организатор на настан со високи компетенции за љубителите на велосипедизмот.</p>
+    </div>-->
+</section>
+
+<!-- Секција Опрема -->
+<section id="gear">
+    <h2>Опрема која треба да се носи</h2><br>
+    <div class="equipment-list">
+        <div class="equipment-item">
+            <img src="static/images/slem.jpg" alt="Заштитен шлем">
+            <h3 style="color: #2980b9;">Заштитен шлем</h3><br>
+            <p style="color: #7f8c8d;">За ваша безбедност е задолжително носење на велосипедска кацига.</p>
+        </div>
+        <div class="equipment-item">
+            <img src="static/images/tocak.jpg" alt="Велосипед" style="margin-top:28px;">
+            <h3 style="color: #2980b9;">Велосипед со целосна опрема</h3><br>
+            <p style="color: #7f8c8d;">Проверете дека вашиот велосипед е во одлична состојба.</p>
+        </div>
+
+        <div class="equipment-item">
+            <img src="static/images/gumi.jpg" alt="Резервни гуми">
+            <h3 style="color: #2980b9;">Резервни гуми и комплет за поправка</h3><br>
+            <p style="color: #7f8c8d;">Бидете подготвени за неочекувани ситуации.</p>
+        </div>
+        <div class="equipment-item">
+            <img src="static/images/vodasport.jpg" alt="Вода">
+            <h3 style="color: #2980b9;">Вода и енергетски гелови</h3><br>
+            <p style="color: #7f8c8d;">Останете хидрирани и наполнети со енергија.</p>
+        </div>
+
+        <div class="equipment-item">
+            <img src="static/images/obleka.jpg" alt="Спортска облека">
+            <h3 style="color: #2980b9;">Удобна спортска облека</h3><br>
+            <p style="color: #7f8c8d;">Изберете удобна облека за вашиот велосипедски пат.</p>
+        </div>
+        <div class="equipment-item">
+            <img src="static/images/svetlo.jpg" alt="Светла">
+            <h3 style="color: #2980b9;">Предно и задно осветлување</h3><br>
+            <p style="color: #7f8c8d;">Грижете се за вашата и безбедноста на другите.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Секција Тури -->
+<section id="tours">
+    <h2 style="color:white;">Нашите велосипедски тури</h2>
+    <div class="tour-list">
+        <div class="tour-item" onclick="openRegistrationForm('Тура 1: Планинска авантура')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt7WZmBybLW1190jQ6uL4O9sRFFhrPffyx_LcM2I0XnSwZtNW9ztrlLMznIEpJ3gvEeak&usqp=CAU" alt="Тура 1">
+            <h3 style="color: #2980b9;">Тура 1: Планинска авантура</h3><br>
+            <p style="color: #7f8c8d;">Датум: -- Октомври 2024</p><br>
+            <p style="color: #7f8c8d;">Локација: Струга-Охрид-Велестово, Охрид</p><br>
+            <p style="color: #7f8c8d;">Старт: 14:00, Караорман, Струга</p><br>
+        </div>
+        <div class="tour-item" onclick="openRegistrationForm('Тура 2: Прекрасни езера')">
+            <img src="https://i0.wp.com/turnimedakinisam.mk/wp-content/uploads/2021/06/01.jpg?fit=1030%2C773&ssl=1" alt="Тура 2">
+            <h3 style="color: #2980b9;">Тура 2: Прекрасни езера</h3><br>
+            <p style="color: #7f8c8d;">Датум: -- Ноември 2024</p><br>
+            <p style="color: #7f8c8d;">Локација: Струга-Охрид-Свети Наум</p><br>
+            <p style="color: #7f8c8d;">Старт: 09:00, Караорман, Струга</p><br>
+        </div>
+        <div class="tour-item" onclick="openRegistrationForm('Тура 3: Градски велосипедизам')">
+            <img src="https://www.hotebike.com/wp-content/uploads/2020/08/9-1.jpg" alt="Тура 3">
+            <h3 style="color: #2980b9;">Тура 3: Градски велосипедизам</h3><br>
+            <p style="color: #7f8c8d;">Датум: -- Декември 2024</p><br>
+            <p style="color: #7f8c8d;">Локација: Струга-Охрид-Струга</p><br>
+            <p style="color: #7f8c8d;">Старт: 12:00, Караорман, Струга</p><br>
+        </div>
+    </div>
+</section>
+
+<!--FAQ-->
+<section id="faq">
+    <h2>Често Поставувани Прашања</h2><br><br>
+    <div class="faq-item">
+        <h3>Како да резервирам тура?</h3>
+        <p>Можете да резервирате тура преку нашата веб-страница, избирајќи тура и пополнувајќи ја формата за резервација.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Што да носам на турата?</h3>
+        <p>Препорачуваме да носите удобни обувки, облека во зависност од времето и опрема за безбедност.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Дали турите се достапни во различни јазици?</h3>
+        <p>Да, нашите водичи можат да водат тури на различни јазици. Ве молиме да ни кажете вашиот избор при резервацијата.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Дали неочекуваните ситуации, како рушена гума треба сами да ги надминеме?</h3>
+        <p>Секако дека не, ние сме тим и секогаш си помагаме меѓусебно, тука сме да надминиме секаков проблем.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Дали за учество во вашиот тим треба да платам?</h3>
+        <p>Никако, ние не бараме пари од нашите членови, само желба и мотивација за велосипедизам.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Треба ли да имам професионален велосипед?</h3>
+        <p>Можете да користите било кој велосипед кој е исправен и може да гарантира успешна велосипедска тура.</p>
+    </div>
+</section>
+
+<!--Lokacija-->
+<section id="location">
+    <h2>Нашата локација</h2><br>
+    <div class="paragraf">
+    <p>Тоа е локацијата од која започнува секоја тура !!</p><br>
+    </div>
+    <div id="map"></div>
+    <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3002.932099291228!2d20.680019275867508!3d41.179648171326924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1350e73e115e55b5%3A0x760223e5e3758e76!2sKaraorman%2C%20Struga!5e0!3m2!1sen!2smk!4v1728303726215!5m2!1sen!2smk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+    </div>
+</section>
+
+<!-- Секција Закажи термин -->
+<section id="registration">
+    <h2 style="color:white";>Закажи термин за велосипедска тура</h2><br><br>
+    <div class="form-container" id="registrationForm">
+        <form action="/register" method="POST">
+        <input type="hidden" name="jazik" value="mk">
+
+<!--Flash порака во формата-->
+<div id="flash-container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% for category, message in messages %}
+        <div class="alert {{ category }}">
+            <span class="alert-icon">
+                {% if category == 'success' %}
+                    ✅
+                {% elif category == 'error' %}
+                    ❌
+                {% endif %}
+            </span>
+            <span class="alert-message">{{ message }}</span>
+        </div>
+      {% endfor %}
+    {% endwith %}
+</div>
+
+            <input type="hidden" id="tour_name" name="tour_name">
+            <label for="first_name" style="color:white;">Име:</label></br>
+            <input type="text" id="first_name" name="first_name" required><br>
+            
+            <label for="last_name" style="color:white;">Презиме:</label><br>
+            <input type="text" id="last_name" name="last_name" required><br>
+            
+            <label for="email" style="color:white;">Е-маил:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            
+            <label for="phone"style="color:white;" >Телефон:</label><br>
+            <input type="text" id="phone" name="phone" required><br>
+
+            <label for="ime_tura" id="labela" style="color:white;">Избери тура:</label><br>
+            <select id="ime_tura" name="ime_tura" method="POST">
+                <option value="">Избери тура</option>
+                <option value="Струга-Охрид-Струга">Струга-Охрид-Струга</option>
+                <option value="Охрид-Св.Наум-Охрид">Охрид-Св.Наум-Охрид</option>
+                <option value="Струга-Охрид-Велестово">Струга-Охрид-Велестово</option>
+                <option value="Струга-Охрид-Велгожди">Струга-Охрид-Велгожди</option>
+              </select>
+
+            <input type="submit" value="Закажи термин">
+        </form>
+        
+<!--Скрипта каде што пораката се брише за 4 секунди во формата-->
+<script>
+    setTimeout(() => {
+        const alerts = document.querySelectorAll('.alert');
+        alerts.forEach(alert => {
+            alert.classList.add('hide');
+            setTimeout(() => alert.remove(), 600);
+        });
+    }, 4000); 
+</script>
+
+    </div>
+</section>
+
+<!--Footer-->
+<footer>
+    <div class="footer-container">
+        <div class="footer-section about">
+            <h3>За Нас</h3>
+            <p>Ние сме тим на професионални водичи кои организираат велосипедски тури низ најубавите предели. Нашата мисија е да ви овозможиме уникатни авантури и незаборавни искуства.</p>
+        </div>
+        <div class="footer-section links">
+            <h3>Корисни Линкови</h3>
+            <ul>
+                <li><a href="#home">Почетна</a></li>
+                <li><a href="#tours">Тури</a></li>
+                <li><a href="#">Контакт</a></li>
+                <li><a href="#about">За Нас</a></li>
+                <li><a href="#">Политика за Приватност</a></li>
+            </ul>
+        </div>
+        <div class="footer-section contact">
+            <h3>Контакт</h3>
+            <p><i class="fas fa-phone-alt"></i> Телефон: +389 77 585 470</p>
+            <p><i class="fas fa-envelope"></i> Е-маил: info@jocobike.mk</p>
+            <p><i class="fas fa-map-marker-alt"></i> Адреса: Струга, Македонија</p>
+        </div>
+        <div class="footer-section social">
+            <h3>Следете не</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Joco Bike Macedonia, Struga | Сите права се задржани.</p>
+    </div>
+</footer>
+
+<!--Script-->
+<script>
+document.getElementById('registrationForm').onsubmit = function() {
+    var tourName = 'Име на тура'; 
+    document.getElementById('tour_name').value = tourName;
+};
+</script>
+
+<script src="static/css/script.js"></script>
+
+<!--Скрипта за хамбургер мени-->
+<script>
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.getElementById('nav-links');
+
+    menuIcon.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        menuIcon.classList.toggle('rotate');
+    });
+
+    // Автоматско затворање ако кликнеш надвор
+    window.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && !menuIcon.contains(e.target)) {
+            navLinks.classList.remove('active');
+            menuIcon.classList.remove('rotate');
+        }
+    });
+</script>
+
+<script src="static/css/animacija.js"></script>
+
+</body>
+</html>
+
