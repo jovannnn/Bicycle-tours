@@ -1,2 +1,0 @@
-FLASK_ENV=production
-DATABASE_URL=mysql+pymysql://root:Fikt_Bitola_EDU123@localhost:3306/registrations_db
